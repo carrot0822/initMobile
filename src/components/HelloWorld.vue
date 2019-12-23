@@ -27,14 +27,27 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button>
   </div>
 </template>
 
 <script>
+import { Button, Dialog } from 'vant';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components:{
+    [Button.name]: Button,
+  },
+  created(){
+    Dialog({ message: '提示ssdasdasdasdasdsadaasda' });
   }
 }
 </script>
