@@ -32,12 +32,12 @@
 <van-button type="info">信息按钮</van-button>
 <van-button type="warning">警告按钮</van-button>
 <van-button type="danger">危险按钮</van-button>
+<div class="test">也行吧</div>
   </div>
 </template>
 
 <script>
 import { Button, Dialog } from 'vant';
-
 export default {
   name: 'HelloWorld',
   props: {
@@ -67,5 +67,15 @@ li {
 }
 a {
   color: #42b983;
+}
+</style>
+<style lang="scss">
+@import '../scss/svg.scss';
+
+.test {
+  border-radius:2px; 
+  background: white svg(square param(--color #00b1ff));
+  //border: 1px solid transparent;
+  //border-image: svg(1px-border param(--color red)) 1 stretch;
 }
 </style>
